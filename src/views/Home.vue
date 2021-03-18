@@ -1,18 +1,6 @@
 <template>
-  <!-- <div>
-    <v-system-bar window dark height="30px">
-      <span>StopWatch</span>
-      <v-icon color="white">mdi-minus</v-icon>
-      <v-icon>mdi-checkbox-blank-outline</v-icon>
-      <v-icon>mdi-close</v-icon>
-    </v-system-bar> -->
-  <v-card color="#ddd" tile class="wrapper" width="400px" height="150px">
-    <v-card-title
-      class="justify-center mt-2"
-      label
-      :text-color="color"
-      style="font-size: 50px"
-    >
+  <v-card dark tile class="wrapper" width="400px" height="150px">
+    <v-card-title class="justify-center mt-2" label style="font-size: 50px">
       {{ watch }}
     </v-card-title>
     <v-card-actions class="justify-space-around pa-4">
@@ -46,7 +34,6 @@
       >
     </v-card-actions>
   </v-card>
-  <!-- </div> -->
 </template>
 
 <script lang="ts">
@@ -91,7 +78,6 @@ export default Vue.extend({
       this.timer;
       this.millisecound = 0;
       this.watch = "00:00:00:00";
-      this.color = "black";
     },
   },
 });
