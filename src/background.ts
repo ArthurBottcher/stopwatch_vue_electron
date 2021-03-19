@@ -16,6 +16,7 @@ async function createWindow() {
     autoHideMenuBar: true,
     frame:false,
     show: false,
+    alwaysOnTop: true,
     webPreferences: {
       contextIsolation: true,
       nodeIntegration: (process.env.ELECTRON_NODE_INTEGRATION as unknown) as boolean,

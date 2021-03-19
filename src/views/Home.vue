@@ -6,18 +6,18 @@
     <v-card-actions class="justify-space-around pa-4">
       <v-btn
         color="success"
-        class="mx-2"
         width="100px"
+        style="-webkit-app-region: no-drag"
         outlined
         @click="timeStart"
       >
-        Start</v-btn
-      >
+        Start
+      </v-btn>
 
       <v-btn
         color="error"
-        class="mx-2"
         width="100px"
+        style="-webkit-app-region: no-drag"
         outlined
         @click="timePaused"
       >
@@ -26,12 +26,13 @@
 
       <v-btn
         color="warning"
-        class="mx-2"
         width="100px"
+        style="-webkit-app-region: no-drag"
         outlined
         @click="timeReset"
-        >Reset</v-btn
       >
+        Reset
+      </v-btn>
     </v-card-actions>
   </v-card>
 </template>

@@ -1,5 +1,5 @@
 <template>
-  <v-app> <Home /> </v-app>
+  <v-app style="-webkit-app-region: drag"> <Home /> </v-app>
 </template>
 
 <script lang="ts">
