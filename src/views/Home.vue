@@ -1,5 +1,5 @@
 <template>
-  <v-card dark tile class="wrapper" width="400px" height="150px">
+  <v-card dark tile width="400px" height="150px">
     <v-card-title class="justify-center mt-2" label style="font-size: 50px">
       {{ watch }}
     </v-card-title>
