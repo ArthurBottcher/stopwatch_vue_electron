@@ -1,5 +1,9 @@
 <template>
-  <v-card dark tile width="400px" height="150px">
+  <v-card dark tile width="400px" height="180px">
+    <v-system-bar color="background" dark>
+      <v-spacer></v-spacer>
+      <span id="closeApp" style="color: white">X</span>
+    </v-system-bar>
     <v-card-title class="justify-center mt-2" label style="font-size: 50px">
       {{ watch }}
     </v-card-title>
@@ -75,7 +79,7 @@ export default Vue.extend({
       clearInterval(this.timer);
     },
 
-    timeReset(): void {
+    timeReset() {
       this.timer;
       this.millisecound = 0;
       this.watch = "00:00:00:00";

@@ -1,4 +1,4 @@
-// "use strict";
+"use strict";
 
 import { app, protocol, BrowserWindow } from "electron";
 import { createProtocol } from "vue-cli-plugin-electron-builder/lib";
@@ -11,24 +11,23 @@ protocol.registerSchemesAsPrivileged([
 async function createWindow() {
   const win = new BrowserWindow({
     width: 400,
-    height: 150,
+    height: 180,
     resizable: false,
     autoHideMenuBar: true,
-    frame:false,
+    frame: false,
     show: false,
     alwaysOnTop: true,
     webPreferences: {
-      contextIsolation: true,
-      nodeIntegration: (process.env.ELECTRON_NODE_INTEGRATION as unknown) as boolean,
+      nodeIntegration: true,
     },
   });
 
   if (process.env.WEBPACK_DEV_SERVER_URL) {
     await win.loadURL(process.env.WEBPACK_DEV_SERVER_URL as string);
-    if (!process.env.IS_TEST) console.log('Running')
+    if (!process.env.IS_TEST) console.log("Running");
   } else {
     createProtocol("app");
-    
+
     win.loadURL("app://./index.html");
   }
   win.once("ready-to-show", () => {
@@ -43,7 +42,6 @@ app.on("ready", async () => {
 app.on("activate", () => {
   if (BrowserWindow.getAllWindows().length === 0) createWindow();
 });
-
 
 app.on("window-all-closed", () => {
   if (process.platform !== "darwin") {
