@@ -2,10 +2,10 @@
   <v-app style="-webkit-app-region: drag"> <Home /> </v-app>
 </template>
 
-<script lang="ts">
+<script>
 import Vue from "vue";
 import Home from "./views/Home.vue";
-export default Vue.extend({
+export default {
   name: "App",
 
   components: {
@@ -15,7 +15,7 @@ export default Vue.extend({
   data: () => ({
     //
   }),
-});
+};
 </script>
 <style lang="scss">
 @import url("https://fonts.googleapis.com/css?family=Share+Tech+Mono");
